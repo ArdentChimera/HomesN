@@ -1,13 +1,20 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Profile from "./pages/Profile";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+
 export default function App() {
 	return (
-		<>
-			<div className="text-blue-700">App</div>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi soluta,
-				voluptas asperiores accusantium fugit corrupti? Perspiciatis,
-				asperiores. Architecto rerum illum atque eligendi culpa assumenda nihil
-				dolorum, veritatis error, libero reiciendis?
-			</p>
-		</>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/profile" element={<Profile />} />
+				<Route path="/sign-in" element={<SignIn />} />
+				<Route path="/sign-up" element={<SignUp />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
